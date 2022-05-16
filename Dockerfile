@@ -16,4 +16,4 @@ RUN pip install psycopg2
 RUN pip install -r requirements.txt
 RUN pip install fastapi
 
-ENTRYPOINT ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000"]
