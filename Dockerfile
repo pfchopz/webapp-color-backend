@@ -7,7 +7,6 @@ EXPOSE 8000
 WORKDIR /opt
 
 RUN apk update \
-    apk upgrade \
     apk install libpq-dev python-dev \
     apk install uvicorn \
     pip install --upgrade wheel \
