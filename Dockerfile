@@ -17,4 +17,4 @@ RUN pip install --upgrade setuptools
 RUN pip install psycopg2
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000"]
+ENTRYPOINT ["python" "-m" "uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000"]
