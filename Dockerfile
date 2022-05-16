@@ -1,4 +1,4 @@
-FROM python:3.6-alpine
+FROM python
 
 COPY . /opt/
 
@@ -6,9 +6,10 @@ EXPOSE 8000
 
 WORKDIR /opt
 
-RUN apk update \
-    apk install libpq-dev python-dev \
-    apk install uvicorn \
+RUN apt-get update \
+    apt-get upgrade \
+    apt-get install libpq-dev python-dev \
+    apapt-getk install uvicorn \
     pip install --upgrade wheel \
     pip install --upgrade setuptools \
     pip install psycopg2 \
