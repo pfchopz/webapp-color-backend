@@ -6,10 +6,10 @@ EXPOSE 8000
 
 WORKDIR /opt
 
-RUN apt-get update \
-    apt-get upgrade \
-    apt-get install libpq-dev python-dev \
-    apt-get install uvicorn \
+RUN apt update \
+    apt upgrade \
+    apt install libpq-dev python-dev \
+    apt install uvicorn \
     pip install --upgrade wheel \
     pip install --upgrade setuptools \
     pip install psycopg2 \
