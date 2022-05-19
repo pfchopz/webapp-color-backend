@@ -13,7 +13,7 @@ DB_PASS= os.environ.get('DB_PASS')
 # Create PostGres DB connection and pull message data
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_SERVER}:5432/postgres")
 with engine.connect() as conn:
-    data = conn.execute("SELECT message FROM data")
+    data = conn.execute("SELECT messages FROM data")
     for entry in data:
         dbdata = entry
 
