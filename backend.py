@@ -19,4 +19,9 @@ with engine.connect() as conn:
 
 @app.get("/message")
 async def root():
+    with engine.connect() as conn:
+        data = conn.execute("SELECT message FROM data")
+        for entry in data:
+            dbdata = entry
+            
     return dbdata['message']
