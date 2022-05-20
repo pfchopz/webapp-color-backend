@@ -24,4 +24,4 @@ async def root():
         for entry in data:
             dbdata = entry
 
-    return dbdata['message']
+    return dbdata['messages']
